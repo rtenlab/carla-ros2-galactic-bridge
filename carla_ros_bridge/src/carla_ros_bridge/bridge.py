@@ -17,6 +17,8 @@ try:
     import queue
 except ImportError:
     import Queue as queue
+import cv2
+from cv_bridge import CvBridge, CvBridgeError
 import sys
 from distutils.version import LooseVersion
 from threading import Thread, Lock, Event

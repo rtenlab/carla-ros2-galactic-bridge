@@ -32,6 +32,10 @@ find_package(rosidl_default_generators REQUIRED)
 find_package(shape_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
 
+# For pthreads and the scheuliung library
+
+find_package(Threads REQUIRED)
+#target_link_libraries(scheduling_node PRIVATE Threads::Threads)
 # Apend "msg/" to each file name
 set(TEMP_LIST "")
 foreach(MSG_FILE ${MSG_FILES})
